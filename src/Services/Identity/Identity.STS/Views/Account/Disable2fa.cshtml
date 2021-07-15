@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Disable2fa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="fa fa-exclamation-triangle"></span>
+        <strong>SubTitle</strong>
+    </p>
+    <p>
+        Info <a asp-action="ResetAuthenticatorWarning"></a>
+    </p>
+</div>
+
+<div>
+    <form asp-action="Disable2fa" method="post" class="form-group">
+        <button class="btn btn-danger" type="submit">Disable2FA</button>
+    </form>
+</div>

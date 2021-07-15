@@ -1,10 +1,19 @@
 ﻿using Identity.Core.Entities.Identity;
 using Identity.Infrastructure.DbContexts;
 using Identity.STS.Configuration;
+using Identity.STS.Configuration.Constants;
 using Identity.STS.Configuration.Identity;
+using Identity.STS.Helpers.Localization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Globalization;
+using System.Linq;
+
 namespace Identity.STS.Helpers
 {
     public static class StartupHelpers
