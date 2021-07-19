@@ -5,7 +5,10 @@ namespace Identity.STS.ViewModels.Account
     public class RegisterViewModel
     {
         [Required]
-        public string UserName { get; set; }
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
 
         [Required]
         [EmailAddress]

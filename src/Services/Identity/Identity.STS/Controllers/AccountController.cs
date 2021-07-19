@@ -103,7 +103,7 @@ namespace Identity.STS.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginInputModel model, string button)
+        public async Task<IActionResult> Login(LoginInputModel model, string button = "login")
         {
             // check if we are in the context of an authorization request
             var context = await _interaction.GetAuthorizationContextAsync(model.ReturnUrl);
@@ -350,7 +350,7 @@ namespace Identity.STS.Controllers
             var email = info.Principal.FindFirstValue(ClaimTypes.Email);
             var userName = info.Principal.Identity.Name;
 
-            return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = email, UserName = userName });
+            return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { Email = email });
         }
 
         [HttpPost]
@@ -371,11 +371,11 @@ namespace Identity.STS.Controllers
             {
                 var user = new UserIdentity
                 {
-                    UserName = model.UserName,
+                    UserName = model.Email,
                     Email = model.Email
                 };
 
-                var result = await _userManager.CreateAsync(user);
+                var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     result = await _userManager.AddLoginAsync(user, info);
@@ -475,8 +475,10 @@ namespace Identity.STS.Controllers
 
             var user = new UserIdentity
             {
-                UserName = model.UserName,
-                Email = model.Email
+                UserName = model.Email,
+                Email = model.Email,
+                FirstName = model.FirstName,
+                LastName = model.LastName
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);

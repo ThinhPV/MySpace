@@ -4,6 +4,7 @@ using Identity.STS.Configuration;
 using Identity.STS.Configuration.Constants;
 using Identity.STS.Configuration.Identity;
 using Identity.STS.Helpers.Localization;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -30,6 +31,10 @@ namespace Identity.STS.Helpers
                 .AddIdentity<UserIdentity, IdentityRole>(options => configuration.GetSection(nameof(IdentityOptions)).Bind(options))
                 .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddDefaultTokenProviders();
+
+            var authenticationBuilder = services.AddAuthentication();
+            AddExternalProviders(authenticationBuilder, configuration);
+
         }
 
         public static IIdentityServerBuilder RegisterIdentityServer(this IServiceCollection services, IConfiguration configuration)
@@ -81,5 +86,35 @@ namespace Identity.STS.Helpers
             return loginConfiguration;
         }
 
+
+        private static void AddExternalProviders(AuthenticationBuilder authenticationBuilder,
+            IConfiguration configuration)
+        {
+            var externalProviderConfiguration = configuration.GetSection(nameof(ExternalProvidersConfiguration)).Get<ExternalProvidersConfiguration>();
+
+            if (externalProviderConfiguration.UseGitHubProvider)
+            {
+                authenticationBuilder.AddGitHub(options =>
+                {
+                    options.ClientId = externalProviderConfiguration.GitHubClientId;
+                    options.ClientSecret = externalProviderConfiguration.GitHubClientSecret;
+                    options.CallbackPath = externalProviderConfiguration.GitHubCallbackPath;
+                    options.Scope.Add("user:email");
+                });
+            }
+
+            //if (externalProviderConfiguration.UseAzureAdProvider)
+            //{
+            //    authenticationBuilder.AddMicrosoftIdentityWebApp(options =>
+            //    {
+            //        options.ClientSecret = externalProviderConfiguration.AzureAdSecret;
+            //        options.ClientId = externalProviderConfiguration.AzureAdClientId;
+            //        options.TenantId = externalProviderConfiguration.AzureAdTenantId;
+            //        options.Instance = externalProviderConfiguration.AzureInstance;
+            //        options.Domain = externalProviderConfiguration.AzureDomain;
+            //        options.CallbackPath = externalProviderConfiguration.AzureAdCallbackPath;
+            //    });
+            //}
+        }
     }
 }

@@ -1,31 +1,21 @@
-﻿@model Identity.STS.ViewModels.Account.RegisterViewModel
+﻿@model Identity.STS.ViewModels.Account.ExternalLoginConfirmationViewModel
 
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "EnableAuthenticator";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewData["Title"].</h2>
+<h2>@ViewData["Title"]</h2>
 
-@await Html.PartialAsync("_ValidationSummary")
+<h4>ViewData["LoginProvider"]</h4>
 
-<form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"] method="post" class="form-horizontal">
-    <h4>SubTitle</h4>
+<form asp-controller="Account" asp-action="ExternalLoginConfirmation" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
     <hr />
-    <div class="form-group">
-        <label asp-for="FirstName" class="col-md-2 control-label">UserName</label>
-        <div class="col-md-10">
-            <input asp-for="FirstName" class="form-control" />
-            <span asp-validation-for="FirstName" class="text-danger"></span>
-        </div>
+    @await Html.PartialAsync("_ValidationSummary")
+    <div class="alert alert-info" role="alert">
+        @ViewData["LoginProvider"]]
     </div>
-    <div class="form-group">
-        <label asp-for="LastName" class="col-md-2 control-label">UserName</label>
-        <div class="col-md-10">
-            <input asp-for="LastName" class="form-control" />
-            <span asp-validation-for="LastName" class="text-danger"></span>
-        </div>
-    </div>
+
     <div class="form-group">
         <label asp-for="Email" class="col-md-2 control-label">Email</label>
         <div class="col-md-10">
@@ -49,7 +39,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <button type="submit" class="btn btn-primary">Button</button>
+            <button type="submit" class="btn btn-primary">Register</button>
         </div>
     </div>
 </form>
