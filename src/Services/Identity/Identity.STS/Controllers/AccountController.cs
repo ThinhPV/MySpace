@@ -468,7 +468,7 @@ namespace Identity.STS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
    
             returnUrl ??= Url.Content("~/");
             ViewData["ReturnUrl"] = returnUrl;
