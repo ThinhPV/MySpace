@@ -25,23 +25,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{78939B01
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceTests", "ServiceTests", "{71149942-44E9-491A-894C-1B807355DC94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBusRabbitMQ", "src\BuildingBlocks\EventBus\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{C8C667C1-D1FC-40D2-8B60-55D5A48D74E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "src\BuildingBlocks\EventBus\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{C8C667C1-D1FC-40D2-8B60-55D5A48D74E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationEventLogEF", "src\BuildingBlocks\EventBus\IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{3F5E7C77-876D-4720-A966-8CF8D8595465}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationEventLogEF", "src\BuildingBlocks\EventBus\IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{3F5E7C77-876D-4720-A966-8CF8D8595465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus", "src\BuildingBlocks\EventBus\EventBus\EventBus\EventBus.csproj", "{F5CACD1A-8613-4141-AAF7-5E8093BA8337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "src\BuildingBlocks\EventBus\EventBus\EventBus\EventBus.csproj", "{F5CACD1A-8613-4141-AAF7-5E8093BA8337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.STS", "src\Services\Identity\Identity.STS\Identity.STS.csproj", "{4DCECB23-3C26-4CF5-A338-937C0E6E6681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.STS", "src\Services\Identity\Identity.STS\Identity.STS.csproj", "{4DCECB23-3C26-4CF5-A338-937C0E6E6681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identiity.Admin", "src\Services\Identity\Identiity.Admin\Identiity.Admin.csproj", "{E8892EFD-3EC9-4BC6-BDCD-4F29F053CB50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identiity.Admin", "src\Services\Identity\Identiity.Admin\Identiity.Admin.csproj", "{E8892EFD-3EC9-4BC6-BDCD-4F29F053CB50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Core", "src\Services\Identity\Identity.Core\Identity.Core.csproj", "{40C44AAC-11A8-48E5-B914-C6F8EB811EEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Core", "src\Services\Identity\Identity.Core\Identity.Core.csproj", "{40C44AAC-11A8-48E5-B914-C6F8EB811EEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "src\Services\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{9DC1C64F-7E6A-422B-AC4D-11FC80A138F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Infrastructure", "src\Services\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{9DC1C64F-7E6A-422B-AC4D-11FC80A138F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Post", "Post", "{14D912E9-ECC8-44CC-AFB5-CA81E8E2E195}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{4560AA3D-4EDE-4E7B-928D-9F6EDDA1555D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVC", "src\WebApps\WebMVC\WebMVC.csproj", "{EEEDC6EB-3F5E-462B-A0ED-005B0F1A8E68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchDog", "src\WebApps\WatchDog\WatchDog.csproj", "{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,14 @@ Global
 		{9DC1C64F-7E6A-422B-AC4D-11FC80A138F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC1C64F-7E6A-422B-AC4D-11FC80A138F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DC1C64F-7E6A-422B-AC4D-11FC80A138F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEDC6EB-3F5E-462B-A0ED-005B0F1A8E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEDC6EB-3F5E-462B-A0ED-005B0F1A8E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEDC6EB-3F5E-462B-A0ED-005B0F1A8E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEDC6EB-3F5E-462B-A0ED-005B0F1A8E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +112,8 @@ Global
 		{9DC1C64F-7E6A-422B-AC4D-11FC80A138F6} = {652652B3-1FD1-4786-BD95-4DDB7F221684}
 		{14D912E9-ECC8-44CC-AFB5-CA81E8E2E195} = {2BE32A01-E43B-4366-86C3-BBE61536AC50}
 		{4560AA3D-4EDE-4E7B-928D-9F6EDDA1555D} = {2BE32A01-E43B-4366-86C3-BBE61536AC50}
+		{EEEDC6EB-3F5E-462B-A0ED-005B0F1A8E68} = {24B65A45-A1DD-46F3-A1AD-32A1FBB547E6}
+		{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5} = {24B65A45-A1DD-46F3-A1AD-32A1FBB547E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E97F493-B9ED-48B5-9754-BEAF98B9F001}
