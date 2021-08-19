@@ -47,13 +47,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMVC", "src\WebApps\WebMV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WatchDog", "src\WebApps\WatchDog\WatchDog.csproj", "{DBBAD0BE-CE25-473D-B1B9-39B7EF6441D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.API", "src\Services\Diary\Diary.API\Diary.API.csproj", "{FC8FBCA8-6295-4CD5-A959-C4235792E379}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diary.API", "src\Services\Diary\Diary.API\Diary.API.csproj", "{FC8FBCA8-6295-4CD5-A959-C4235792E379}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.Domain", "src\Services\Diary\Diary.Domain\Diary.Domain.csproj", "{A7CD1616-595F-4F3E-8146-542BF347E9D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diary.Domain", "src\Services\Diary\Diary.Domain\Diary.Domain.csproj", "{A7CD1616-595F-4F3E-8146-542BF347E9D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.Infrastructure", "src\Services\Diary\Diary.Infrastructure\Diary.Infrastructure.csproj", "{E3DFD384-E02C-44FD-B529-48FCE1CA53BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diary.Infrastructure", "src\Services\Diary\Diary.Infrastructure\Diary.Infrastructure.csproj", "{E3DFD384-E02C-44FD-B529-48FCE1CA53BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diary.BackgroundTasks", "src\Services\Diary\Diary.BackgroundTasks\Diary.BackgroundTasks.csproj", "{48BFE3E9-C87A-4754-9032-781AC3964C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diary.BackgroundTasks", "src\Services\Diary\Diary.BackgroundTasks\Diary.BackgroundTasks.csproj", "{48BFE3E9-C87A-4754-9032-781AC3964C23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
