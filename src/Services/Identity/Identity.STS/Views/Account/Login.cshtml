@@ -28,7 +28,7 @@
 
     <div class="login-page">
         <div class="page-header">
-            <h1>Title</h1>
+            <h1>Login Page</h1>
         </div>
 
         @await Html.PartialAsync("_ValidationSummary")
@@ -39,7 +39,7 @@
             {
                 <div class="col-sm-6">
                     <div class="card mt-3">
-                        <h5 class="card-header">LocalLogin</h5>
+                        <h5 class="card-header">Local Login</h5>
                         <div class="card-body">
                             <form asp-route="Login">
                                 <input type="hidden" asp-for="ReturnUrl" />
@@ -90,8 +90,8 @@
                                     <div class="form-group row">
                                         <div class="col-sm-12">
                                             <button class="btn btn-primary" name="button" value="login">Login</button>
-                                            <button class="btn btn-secondary" name="button" value="cancel">Cancel</button>
-                                            <a asp-action="ForgotPassword" asp-controller="Account" class="btn btn-info" value="forgot">Forgot</a>
+                                            @*<button class="btn btn-secondary" name="button" value="cancel">Cancel</button>*@
+                                            @*<a asp-action="ForgotPassword" asp-controller="Account" class="btn btn-info" value="forgot">Forgot</a>*@
                                             <a asp-action="Register" asp-controller="Account" class="btn btn-dark" value="forgot">Register</a>
                                             @*@if (RootConfiguration.RegisterConfiguration.Enabled)
                                                 {
@@ -110,7 +110,7 @@
             {
                 <div class="col-sm-6 external-providers">
                     <div class="card mt-3">
-                        <h5 class="card-header">ExternalLogin</h5>
+                        <h5 class="card-header">External Login</h5>
                         <div class="card-body">
                             <ul class="list-inline">
                                 @foreach (var provider in Model.VisibleExternalProviders)

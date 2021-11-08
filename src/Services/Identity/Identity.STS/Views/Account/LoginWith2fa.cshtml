@@ -10,7 +10,7 @@
 
 <h2>@ViewData["Title"]</h2>
 <hr />
-<p>Info</p>
+@*<p>Info</p>*@
 <div class="row">
     <div class="col-md-4">
         <form method="post" asp-route-returnUrl="@Model.ReturnUrl">
@@ -27,7 +27,7 @@
                         Remember
                     </div>
                     <toggle-button>
-                        <input asp-for="RememberMachine" />
+                        @*<input asp-for="RememberMachine" />*@
                     </toggle-button>
                 </div>
             </div>
@@ -39,5 +39,5 @@
 </div>
 <p>
     NoAuthenticatorDevice
-    <a asp-action="LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">LoginWithRecoveryCode</a>
+    <a asp-action="LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">Login With Recovery Code</a>
 </p>

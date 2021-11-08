@@ -7,7 +7,7 @@ namespace Identity.STS.ViewModels.Account
 {
     public class LoginViewModel : LoginInputModel
     {
-        public bool AllowRememberLogin { get; set; } = true;
+        public bool AllowRememberLogin { get; set; } = false;
         public bool EnableLocalLogin { get; set; } = true;
         public LoginResolutionPolicy LoginResolutionPolicy { get; set; } = LoginResolutionPolicy.Username;
 
